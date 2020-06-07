@@ -1,0 +1,257 @@
+body{
+font-family: "Montserrat";
+}
+
+
+#title {
+  background-color: #ff4c68;
+  color: white;
+
+}
+
+.container-fluid {
+  padding: 3% 15% 7%;
+}
+
+h1 {
+  font-size: 3rem;
+  /* // 3rem = 3 * 16 = 48 px */
+  font-family: "Prompt";
+
+  line-height: 1.5;
+  /* spacing bw two lines */
+}
+
+p{
+  color: #8f8f8f;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar{
+padding: 0 0 4.5rem;
+/* 4.5 to add space in bw brand name and the h1 text as all comes in the biggesr tag i.e. navbar
+as it is added to bottom and 0 ,0 to top and left right
+to align it with the text below to overcome default bootstrap margin */
+}
+
+.navbar-brand {
+  /*class of the brand name i.e. tindog*/
+ font-family: "ubuntu";
+  font-size: 2.5rem;
+}
+
+.nav-item{
+padding: 0  1.125rem;
+  /* 1.125rem = 18 px (1rem = 16px).to the right and left and 0 to top and bottom  */
+  font-size: 1.2rem;
+
+}
+
+.nav-link{
+
+  /* to change the links of contact , download and all */
+font-family: "Montserrat";
+
+/* we can also add it to the nav item class */
+
+}
+
+/*                       DOWNLOAD BUTTON       */
+
+.download-button{
+  margin: 5% 3% 5% 0;
+}
+
+
+/*                         TITLE IMAGE */
+
+.title-image{
+  width:50%;
+  /* to make it size a bit smaller */
+   transform: rotate(25deg);
+    /* to rotate it to clockwise if we use -25deg then it will rotate to anticlockwise */
+margin-left: 5rem;
+/* to shift it towards right */
+
+
+position: absolute;
+/* position=>to use its z index property as by default every element has z index = 0
+ao no need to write z-index = 0*/
+
+right: 35%;
+/* to shift the image to the right to make it in the middle of that particular column
+and remember we have used the position: absolute above so positioned accordingly */
+  }
+
+
+  /*     FEATURES i.e. THE THREE BLOCKS WHICH WILL TELL ABOUT APP */
+
+#features{
+background-color: white;
+padding: 7% 15%;
+position: relative;
+/* position=>to use z index property and relative to use the flow of html order as relative
+obeys the flow of html order of the elements */
+z-index: 1;
+/* as to make it on top of the image as it by default  have z index = 0 */
+}
+
+.feature-box{
+  text-align: center;
+  /* to make the txt to alling in centre of all the three features */
+padding: 5%;
+/* to add space bw the heading and the text to make it more easy to read */
+}
+
+.features-h3{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.icon{
+color: #ef8172;
+/* size was increased in class by using fa-4x */
+  margin-bottom: 1rem;
+  /* to add space bw icons and the heading of features   below  */
+}
+
+
+
+.icon:hover{
+/* to access the properties when we hover on the icon */
+  color: #ff4c68;
+  /* change color when we hover on the icon */
+
+
+}
+    /*                     TESTIMONIAL SECTION (REVIEWS) */
+
+#testimonials{
+
+  text-align: center;
+  background-color: #ef8172;
+  color: white;
+  /* to change the color of the text */
+}
+
+.testimonial-h2{
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 3rem;
+
+}
+
+.testimonial-image{
+  width: 15%;
+  border-radius: 100%;
+  /* to make it circle in shape from square */
+  margin: 1.2rem;
+  /* to separate it from all other text */
+}
+  /* sliding items  in the testimonial section */
+.carousel-item{
+  padding: 7% 15%;
+}
+
+
+/* PRESS SECTION */
+#press{
+  background-color: #ef8172;
+/* same color as previous section as we want to look both section similar */
+  text-align: center;
+  /* to make the images centered */
+  padding-bottom: 3%;
+  /* so that this section wouldn't end suddenly */
+}
+
+.press-logo{
+  width:15%;
+  margin: 1rem 1.2rem 3rem;
+}
+
+
+
+
+
+/*                                  PRICING SECTION  */
+#pricing{
+  text-align: center;
+  padding: 6.25rem;
+  /* 6.25 rem = 100px; (as 16px = 1rem as 100 px => 100/16 = 6.25rem ) */
+}
+
+.pricing-column{
+  padding: 3% 2%;
+  /* to add space bw the mainn heading of pricing section and the cards and some space bw the
+  cards also*/
+}
+
+
+/*    CALL TO ACTION (TEST LINE AND THE DOWNLOAD BUTTONS) */
+
+#cta{
+  background-color: #ff4c68;
+  text-align: center;
+padding: 7% 15%;
+}
+
+.cta-h3{
+  color: white;
+  font-size: 3.5rem;
+  font-family: "Montserrat";
+  font-weight: 900;
+  /* 900 is equivalent to black(most boldest) */
+  line-height: 1.5;
+
+  /* padding-top: 3rem; */
+}
+
+.cta-download-button{
+  margin: 5% 3% 5% 0;
+
+}
+
+
+/*                          FOOTER         */
+
+#footer{
+  text-align: center;
+  padding: 2% 15%;
+}
+
+.footer-icon{
+  margin: 5% 2% 5%;
+}
+
+/*                                 MEDIA QUERY BREAKPOINT  */
+
+/* it is used to make our website responsive i.e. to make the size adaptable to different screen sizes
+we will make our size to look better on the ipad and the mobile size different to that of the
+desktop/laptop size we find that the max size of the i pad screen is 1028 px find it out
+from the inspect element we are going to align the title to the centre
+and change image position to static so that it will not go under the feature section
+which we do above by z-index property and to rotate back our image to portrait instead of rotate  */
+
+@media (max-width: 1028px) {
+/* width finded by inspect element which is max width of ipad size   */
+
+#title{
+  text-align: center;
+  /* to centered the title when it comes to the ipad and the phone size */
+}
+
+.title-image{
+  position: static;
+  /* to make it visible below the desktop size as by making above it position: absolute and
+  changing the z index */
+
+  transform: rotate(0);
+  /* to make it portrait instead of rotated below the desktop size */
+
+ margin-right: 5rem;
+ /* to move the image to the centre */
+}
+}
